@@ -717,21 +717,21 @@ de répartition. Cette notion ne concerne que les variables quantitatives.
 
 
 ```js
-Soit la fonctionF x :R→[0,1]définie par 
-             F x (x) :=pourcentage des individus dont la valeur du caractère est≤x. 
-Cette fonction s’appelle la fonction de répartition du caractèreX.
+Soit la fonction F x :R→[0,1]définie par 
+             F x (x) := pourcentage des individus dont la valeur du caractère est ≤ x. 
+Cette fonction s’appelle la fonction de répartition du caractère X.
 
 ```
 _Remarque 4_
 
 ```js
 Pour tout i∈{ 1 ,...,n} , on a
-F x (x i ) =F i.
-La courbe de F xpasse par les points (x 1 ,F 1 ) , (x 2 ,F 2 ),... et (x n ,F n ).
+Fx(xi ) = Fi.
+La courbe de Fx passe par les points (x1 ,F1 ) , (x2 ,F2 ),... et (xn ,Fn ).
 ```
 
 ```console
-En se basant sur notre exemple, la courbe deF _x_ est représentée ci-dessous (Figure 2.6)
+En se basant sur notre exemple, la courbe de Fx est représentée ci-dessous (Figure 2.6)
 sur
 ```
 ```js
@@ -740,10 +740,10 @@ sur
 ```js
 Dans ce cas, nous avons:
 
-- Six < 0 , alorsF _x_ (x) = 0.
-- Six∈[0,1[, alorsF _x_ (x) = 0. 09.
+- Si x < 0 , alors Fx(x) = 0.
+- Si x ∈ [0,1[, alors Fx(x) = 0. 09.
     ...
-- Six≥ 6 , alorsF _x_ (x) = 1.
+- Si x ≥ 6 , alors Fx(x) = 1.
 
 ```
 
@@ -754,7 +754,7 @@ courbe en escalier représentant les fréquences cumulées relatives.
 ![Image](https://github.com/daniel497/statistique_descriptive/blob/master/image2_6.jpg)
 
 ```
-Figure2.6:Représentation d’une variable quantitative discrète par la courbe cumulative.
+Figure 2.6: Représentation d’une variable quantitative discrète par la courbe cumulative.
 ```
 
 
@@ -766,12 +766,12 @@ Figure2.6:Représentation d’une variable quantitative discrète par la courbe 
 La fonction de répartition satisfait, pour i∈{ 1 ,...,n} ,
 ```
 ```js
-l’égalité,F x (x i ) = F i,
+l’égalité,Fx(xi) = Fi,
 
-l’expression, F x (x) =
+l’expression, Fx(x) =
                               0 , si x < x1 ,
-                              F1 , si x1 ≤x < x2 ,
-                              Fi , si x i ≤x < xi +1,
+                              F1 , si x1 ≤ x < x2 ,
+                              Fi , si xi ≤ x < xi+1,
                               1 , si x ≥ xn.
 
 ```
@@ -788,7 +788,7 @@ fréquemment sont la moyenne, la médiane et le mode.
 
 ```console
 Le mode d’une V.S est la valeur qui a le plus grand effectif partiel (ou la plus grande
-fréquence partielle) et il est dénoté parM 0.
+fréquence partielle) et il est dénoté par M0.
 ```
 
 
@@ -813,7 +813,7 @@ On peut avoir plus d’un mode ou rien.
 On appelle médiane la valeur Me de la V.S X qui vérifie la relation suivante : 
 ```
 ```js
-              F x (Me−)< 0. 5 ≤F x (Me+) =F x (Me).
+              Fx(Me−) < 0. 5 ≤ Fx(Me+) =Fx(Me).
 ```
 ```console
 La médiane partage la série statistique en deux groupes de même effectif.
@@ -824,25 +824,25 @@ La médiane partage la série statistique en deux groupes de même effectif.
 
 ```js
    Dans l’exemple précédent, la relation 
-             F x (0) = 0< 0. 5 ≤F x (0+) = 0. 09
+             Fx(0) = 0 < 0. 5 ≤ Fx(0+) = 0.09
    n’est pas satisfaite. Donc, la médiane est différente de 0. Par contre, nous avons
-             F x (2−) = 0. 25 < 0. 5 ≤F x (2+) =F(2) = 0. 58. 
+             Fx(2−) = 0.25 < 0.5 ≤ Fx(2+) = F(2) = 0.58. 
    Donc, Me= 2.
 ```
 
 **La moyenne**
 
 ```console
-On appelle moyenne deX, la quantité
+On appelle moyenne de X, la quantité
 ```
 
 ```js
              _        n         n
-             x= 1/N * ∑ nixi= ∑ fixi, 
-                     i =1      i=1  
+            x = 1/N * ∑ nixi =  ∑ fixi, 
+                     i=1       i=1  
 ```
 ```console
-avecN=Card(Ω). On peut donc exprimer et calculer la moyenne dite "arithmétique" avec
+avec N = Card(Ω). On peut donc exprimer et calculer la moyenne dite "arithmétique" avec
 des effectifs ou avec des fréquences.
 
 ```
@@ -851,17 +851,17 @@ des effectifs ou avec des fréquences.
 
 ```js
    _
-Si x= 2. 46 , alors nous avons au moyenne une famille de quartier a 2. 46 d’enfants.
+Si x = 2.46 , alors nous avons au moyenne une famille de quartier a 2.46 d’enfants.
 ```
 ```console
-La valeur de la moyenne est abstraite. Comme dans l’exemple précédent,x= 2. 46 est
+La valeur de la moyenne est abstraite. Comme dans l’exemple précédent,x= 2.46 est
 un chiffre qui ne correspond pas à un fait concret.
 ```
 
 ```js
 La moyenne arithmétique dont on vient d’indiquer la formule est dite moyenne pondérée;
 cela signifie que chaque valeur de la variable est multipliée (pondérée) par un 
-coefficient, ici par l’effectifn i qui lui correspond. Dans ce cas, chaque valeurx i de la
+coefficient, ici par l’effectif n i qui lui correspond. Dans ce cas, chaque valeur xi de la
 intervient dans le calcul de la moyenne autant de fois qu’elle a été observée. On parle de
 variable moyenne arithmétique simple quand on n’effectue pas de pondération. Par exemple, si 5
 étudiants ont pour âge respectif 18 , 19 , 20 , 21 et 22 ans, leur âge moyen est donné par
@@ -889,7 +889,7 @@ La différence entre la plus grande valeur et la plus petite valeur du caractèr
 par la quantité
 ```
 ```js
-                       e=xmax−xmin,
+                       e = xmax−xmin,
 ```                       
 ```console
 s’appelle l’étendue de la V.S X. Le calcul de l’étendue est très simple. Il donne une première
@@ -900,7 +900,7 @@ indicateurs de dispersion plus élaborés (voir ci-dessous).
 **La variance**
 
 ```console
-On appelle variance de cette série statistiqueX, le nombre
+On appelle variance de cette série statistique X, le nombre
 ```
 ```js
                 n      _
@@ -920,11 +920,11 @@ la variance et la moyenne, parfois plus pratique dans le calcule de la variance.
 
 ```console
 
-Soit (x i ,n i ) une série statistique de moyenne x et de variance V ar(X). Alors,
+Soit (xi, ni) une série statistique de moyenne x et de variance Var(X). Alors,
 ```
 ```js
-                          n      _
-                V ar(X) = ∑ f i (x − xi )^2 
+                          n    _
+                 Var(X) = ∑ fi(x − xi)^2 
                          i=1
 
 ```
@@ -993,7 +993,7 @@ Soit Ω l’ensemble des nouveaux nés au C.H.U d’une ville pendant les 3 pre
 de 2017. Nous désignons par X le poids des nouveaux nés. On suppose que
 ```
 ```js
-             x min = 2. 701 et x max = 5. 001.
+             x min = 2.701 et x max = 5.001.
 ```
 
 _Remarque 9_
@@ -1013,12 +1013,12 @@ Réponse : Partager les valeurs prises par X en classes de valeurs.
 ```console
 
 On appelle classe de valeurs de X un intervalle de type [a,b[ tel que X∈[a,b[ si et
-seulement si a≤X(w)< b , c’est à dire, que les valeurs du caractère sont dans la classe
+seulement si a ≤ X(w) < b , c’est à dire, que les valeurs du caractère sont dans la classe
 [a,b[.
 ```
 
 
-Dès qu’un caractère est identifié en tant que continu, ces modalitésC _k_ = [L _k_ ,L _k_ +1[
+Dès qu’un caractère est identifié en tant que continu, ces modalités C _k_ = [L _k_ ,L _k_ +1[
 sont des intervalles avec
 
 - L _k_ : borne inférieure.
@@ -1040,7 +1040,7 @@ le centre des classes comme représentant.
 #### 3.1.2 Nombre de classes
 
 ```console
-En combien de classes partageons-nous les valeurs? la réponse n’est pas unique. SoitN
+En combien de classes partageons-nous les valeurs? la réponse n’est pas unique. Soit N
 l’effectif total. Nous pouvons considérer dans ce cours trois réponses à titre d’exemple.
 ```
 
@@ -1065,13 +1065,13 @@ Considérons 30 valeurs entre 56. 5 cm et 97. 8 cm. Dans ce cas, k= √30 et on 
 2. Une réponse : la formule de Sturge
 ```
 ```js
-         k= 1 + 3.3 log 10 (N).
+         k= 1 + 3.3 log10(N).
 ```
 ```console
 3. Une réponse : la formule de Yule
 ```
 ```js
-k= 2. 54(racine quatrième√ N)
+k= 2.54(racine quatrième √N)
 ```
 
 _Remarque 11_
@@ -1083,9 +1083,9 @@ De ce fait, on peut avoir plusieurs tableaux statistiques selon le nombre de cla
 - Exemple 18
 
 ```console
-Si on prend N= 30 , alors le nombre de classes est donné, par exemple, par
- soit la formule de Sturge_ k= 1 + 3.3 log 10 (30) ~= 6 _,
- soit la formule de Yule_ k= 2. 54(racine quatrième √30) ~= 6
+Si on prend N = 30 , alors le nombre de classes est donné, par exemple, par
+ soit la formule de Sturge_ k = 1 + 3.3 log10(30) ~= 6 _,
+ soit la formule de Yule_ k= 2.54 (racine quatrième √30) ~= 6
 
 Nous mentionnons que les deux formules sont presque pareils si N << 200.
 ```
@@ -1099,7 +1099,7 @@ nous parlons aussi du pas ou de la longueur de la classe.
 
 ```js
 Le nombre
-                  e=x max −x min
+                  e = x max − x min
 s’appelle étendu de X. Dans ce cas, on peut définir le pas par
 
 a i := étendu/nombre de classes  =x max −x min/k
@@ -1121,34 +1121,34 @@ s’appelle effectif partiel de C i.
 
 
 ```
-Figure3.2:Le nombre d’individus qui prennent des valeursx i dansC i.
+Figure3.2:Le nombre d’individus qui prennent des valeurs xi dansC i.
 ``` 
 
 **Définition 15**
 
 ```js
 Le nombre
-              fi :=ni/N
+              fi := ni/N
 
-est appelé la fréquence partielle de C i.
+est appelé la fréquence partielle de Ci.
 ```
 
 **Définition 16**
 
 ```js
-On appelle l’effectif cumulé de C i la quantité
+On appelle l’effectif cumulé de Ci la quantité
                         i
-                 N i := ∑ nj. 
+                  Ni := ∑ nj. 
                        j=1
 ```
 
 **Définition 17**
 
 ```js
-On appelle la fréquence cumulée de C i la quantité
+On appelle la fréquence cumulée de Ci la quantité
 
                         i
-                 F i := ∑ fj
+                  Fi := ∑ fj
                        j =1
 ```
 
@@ -1157,11 +1157,11 @@ _Remarque 12_
 ```console
 Nous avons, comme dans le chapitre précédent, les interprétations suivantes :
 ```
-- n _i_ : _est le nombre d’individus dont les valeurs des caractères sont dans la classe_
-    C _i,
-- f _i_ : _est le pourcentage des_ w _tel que_ X(w)∈C _i,
-- N _i_ : _est égale au Card_ {w: X(w)∈C 1 ∪C 2 ∪...∪C _i_ } _,
-- F _i_ : _est le pourcentage des w tel que_
+- ni : _est le nombre d’individus dont les valeurs des caractères sont dans la classe_
+    Ci,
+- fi : est le pourcentage des_ w _tel que_ X(w)∈Ci,
+- Ni : est égale au Card_ {w: X(w)∈ C1 ∪ C2 ∪...∪Ci},
+- Fi : est le pourcentage des w tel que
 
 ```js
                       X(w)∈ C1 ∪...∪ Ci.
@@ -1173,7 +1173,7 @@ Nous avons, comme dans le chapitre précédent, les interprétations suivantes :
 ```console
 Nous pouvons représenter le tableau statistique par un histogramme. Nous reportons
 les classes sur l’axe des abscisses et, au-dessus de chacune d’elles, nous traçons un rectangle
-dont l’aire est proportionnelle à la fréquencef _i_ (ou l’effectifn _i_ ) associée. Ce graphique est
+dont l’aire est proportionnelle à la fréquence fi (ou l’effectif ni) associée. Ce graphique est
 appelé l’histogramme des fréquences (voir Figure 3.3).
 
 ```
@@ -1181,7 +1181,7 @@ appelé l’histogramme des fréquences (voir Figure 3.3).
 
 
 ```
-Figure3.3:Histogramme des fréquences ou des éffctifs.
+Figure3.3: Histogramme des fréquences ou des éffctifs.
 ```
 
 
@@ -1195,14 +1195,14 @@ Figure3.3:Histogramme des fréquences ou des éffctifs.
 Nous allons noter par
 
 ```js
-C i = [xmin=a 0 ,xmin+1=a 1 [.
+Ci = [xmin = a0 , xmin+1 = a1 [.
 ```
 
 **Définition 18**
 
 ```console
 
-La fonction F x :R→[0,1] définie par F x (x) représente le pourcentage des individus
+La fonction Fx:R→[0,1] définie par Fx(x) représente le pourcentage des individus
 tel que la valeur de leur caractère est inférieure ou égale à x. Elle est donnée par
 
 ```
@@ -1211,9 +1211,9 @@ tel que la valeur de leur caractère est inférieure ou égale à x. Elle est do
 Fx(x)= :
 
 - 0 , si x < a 0 ,
-- f1/h(x−a^0 ), si a^0 ≤x < a^1 ,
-- F i + ((f i +1)/h)(x−a i ), si a i ≤x < a i +1,
-- 1 , si x≥a n ,
+- f1/h(x−a^0 ), si a^0 ≤ x < a^1 ,
+- Fi + ((fi+1)/h)(x−ai), si ai ≤ x < ai+1,
+- 1 , si x ≥ an ,
 
 et elle s’appelle la fonction de répartition de X.
 ```
@@ -1225,9 +1225,9 @@ Nous expliquons cette formulation de la fonction de répartition dans cette rema
 _Remarque 13_
 
 ```console
-Nous calculons F x (x) par extrapolation (voir Figure 3.4). Nous avons déjà F(L i ) =F i.
+Nous calculons F x (x) par extrapolation (voir Figure 3.4). Nous avons déjà F(Li ) =Fi.
 De plus,
-tan(α) = F(L i +1)−F(L i )/L i +1−L i= F(x)−F(L i )/x−L i
+tan(α) = F(Li+1)−F(Li)/Li+1−Li= F(x)−F(Li)/x−Li
 ```
 
 
@@ -1238,36 +1238,36 @@ tan(α) = F(L i +1)−F(L i )/L i +1−L i= F(x)−F(L i )/x−L i
 Ce qui implique la formule de la fonction de répartition
 ```
 ```js
-F(x) = (f i +1/h)(x−L i ) +F i.
+F(x) = (fi+1/h)(x−Li) + Fi.
 ```
 
 ![Image](https://github.com/daniel497/statistique_descriptive/blob/master/image3_8.jpg)
 
 
 ```
-Figure3.4:Le calcul deF x (x)par extrapolation.
+Figure3.4: Le calcul deFx(x) par extrapolation.
 ```
 
 ```console
-La courbe deF _x_ est nulle avanta 0 , constante égale à 1 aprèsa _n_ et joint les points(a 0 ,0),
-(a 1 ,F 1 ),...,(a _n_ ,1)par des segments de droites (voir Figure 3.5).
+La courbe de Fx est nulle avant a0 , constante égale à 1 après an et joint les points(a0, 0),
+(a1, F1 ),...,(an, 1) par des segments de droites (voir Figure 3.5).
 ```
 ![Image](https://github.com/daniel497/statistique_descriptive/blob/master/image3_5.jpg)
 
 
 ```
-Figure3.5:La courbe des fréquences cumulées.
+Figure3.5: La courbe des fréquences cumulées.
 ```
 ### 3.3 Paramètres de tendance central
 
 ```console
-On note parC _i_ le centre de la classeC _i_ et nous considéronsf _i_ la fréquence partielle
-deC _i_.
+On note par Ci le centre de la classe Ci et nous considérons fi la fréquence partielle
+de Ci.
 ```
 ![Image](https://github.com/daniel497/statistique_descriptive/blob/master/image3_6.jpg)
 
 ```
-Figure3.6:Le centre de la classe.
+Figure3.6: Le centre de la classe.
 ```
 **La moyenne**
 
@@ -1302,22 +1302,22 @@ grand effectif partiel (ou la plus grande fréquence partielle). La quantité
 
 
 ```js
-M 0 =L i + (∆1/(∆ 1 + ∆ 2))a i
+M0 = Li + (∆1/(∆1 + ∆2))ai
 ```
 s’appelle le mode avec (voir Figure 3.7)
 ```js
 L i: la borne inférieure de la classe modale.
 a i: le pas de la classe modale.
-∆ 1 =n 0 −n 1 , ∆ 2 =n 0 −n 2 ou bien ∆ 1 =f 0 −f 1 , ∆ 2 =f 0 −f 2.
-n 0 et f 0 sont l’effectif et la fréquence associés à la classe modale.
-n 1 et f 1 sont l’effectif et la fréquence de la classe qui précède la classe modale.
-n 2 et f 2 sont l’effectif et la fréquence de la classe qui suit la classe modale.
+∆1 = n0 − n1, ∆2 = n0 − n2 ou bien ∆1 = f0 − f1 , ∆2 = f0 −f2.
+n0 et f0 sont l’effectif et la fréquence associés à la classe modale.
+n1 et f1 sont l’effectif et la fréquence de la classe qui précède la classe modale.
+n2 et f2 sont l’effectif et la fréquence de la classe qui suit la classe modale.
 ```
 
 ![Image](https://github.com/daniel497/statistique_descriptive/blob/master/image3_7.jpg)
 
 ```
-Figure3.7:Représentation ou détermination graphique du mode (cas continu).
+Figure3.7: Représentation ou détermination graphique du mode (cas continu).
 ```
 
 _Remarque 14_
@@ -1332,7 +1332,7 @@ deux segments représentés dans la Figure 3.7. Cette notion n’est pas unique.
 **Définition 21**
 
 ```console
-C'est la valeur Me telle que F(Me) = 0. 5. Cette valeur est unique.
+C'est la valeur Me telle que F(Me) = 0.5. Cette valeur est unique.
 
 ```
 
@@ -1344,31 +1344,31 @@ Nous pouvons la déterminer graphiquement ou par calcule.
 _Graphiquement à partir de la formule_
 
 ```js
-tan(α) = F(L i +1)−F(L i )/L i +1−L i = 0. 5 −F(L i )/Me−L i.
+tan(α) = F(Li+1)− F(Li)/Li+1 − Li = 0.5 − F(Li)/Me − Li.
 ```
 
 ```console
-Plus précisément, dans la figure 3.8, nous mettonsF(x) = 0. 5 etx=Me.
+Plus précisément, dans la figure 3.8, nous mettonsF(x) = 0.5 et x = Me.
 ```
 
 **2. Deuxième méthode** : 
 _En utilisant directement la fonction de répartition donnée par_
 
 ```js
-F(x) = ((f i +1) /h)(x−L i ) +F i.
+F(x) = ((fi+1)/h)(x − Li) + Fi.
 ```
 ```console
 Nous retrouvons donc
 ```
 ```js
-0 .5 =((f i +1)/h) (Me−L i ) +F i.
+0.5 =((fi+1)/h) (Me − Li) + Fi.
 ```
 
 ![Image](https://github.com/daniel497/statistique_descriptive/blob/master/image3_8.jpg)
 
 
 ```
-Figure3.8:Le calcul de la médiane par extrapolation.
+Figure3.8: Le calcul de la médiane par extrapolation.
 ```
 
 ### 3.4 Paramètres de dispersion
@@ -1380,8 +1380,8 @@ Figure3.8:Le calcul de la médiane par extrapolation.
 La variance est la quantité
 ```
 ```js
-                      n    _
-            V ar(x) = ∑ fi (x - Ci)^2
+                      n     _
+             Var(x) = ∑ fi (x - Ci)^2
                      i=1
 ```
 
@@ -1392,8 +1392,8 @@ Pour le calcul, on utilise (voir Chapitre 2, Théorème 1)
 ```
 
 ```js
-                      n    _
-            V ar(x) = ∑ fiCi^2 - x^2
+                      n          _
+             Var(x) = ∑ fiCi^2 - x^2
                      i=1
 ```
 
@@ -1404,7 +1404,7 @@ La quantité
 ```
 
 ```js
-σX = √ V ar(x)
+σX = √Var(x)
 ```
 
 ```console
@@ -1418,33 +1418,33 @@ Nous généralisons la notion de la médiane dans la définition suivante.
 **Définition 24**
 
 ```console
-Pour i∈{ 1 , 2 , 3 } , la quantité Q itel que F(Q i ) = 4 i s’appelle le i emquartile.
+Pour i∈{ 1, 2, 3} , la quantité Qi tel que F(Qi) = 4i s’appelle le i emquartile.
 ```
 
 - Exemple 19
 
 ```console
-Pour i= 2 , Q 2 tel que F(Q 2 ) =2/4 = 0. 5. Donc, Q 2 =Me.
+Pour i=2 , Q2 tel que F(Q2) = 2/4 = 0.5. Donc, Q2 = Me.
 ```
 
 ```console
-La détermination ou le calcul deQ _i_ se fait exactement comme le calcul de la médiane
+La détermination ou le calcul de Qi se fait exactement comme le calcul de la médiane
 (graphiquement ou analytiquement).
 ```
 **Interprétation** : 
 
 ```console
-Il y a 25 % d’individus dont la valeur du caractère est dans l’in-
-tervalle[a 0 ,Q 1 ]. De même pour les autres quartiles. Ces intervalles s’appellent "intervalles
+Il y a 25% d’individus dont la valeur du caractère est dans l’in-
+tervalle[a 0 ,Q1]. De même pour les autres quartiles. Ces intervalles s’appellent "intervalles
 interquartiles".
 ```
 
 ```js
-                Q1 →25%,
+                Q1 → 25%,
 
-                Q2 →50%,
+                Q2 → 50%,
 
-                Q3 →75%.
+                Q3 → 75%.
 ```
 
 ![Image](https://github.com/daniel497/statistique_descriptive/blob/master/image3_9.jpg)
@@ -1482,8 +1482,8 @@ ou directement
 ```
 
 ```console
-Dans ce cas,Zest dite variable statistique à deux dimensions avec Card(Ω) =N, avecN
-un entier fini. Le couple(X,Y)est appelé le couple de la variable statistique.
+Dans ce cas, Z est dite variable statistique à deux dimensions avec Card(Ω) = N, avec N
+un entier fini. Le couple (X,Y) est appelé le couple de la variable statistique.
 ```
 
 
@@ -1511,20 +1511,20 @@ Les séries statistiques à deux variables peuvent être présentées de deux fa
 **Présentation 1**
 
 ```console
-A chaquew i , on associé(x i ,y i ), c’est à dire,
+A chaque wi, on associé(xi ,yi), c’est à dire,
 ```
 
 ```js
-                          w i →(x i ,y i ).
+                          wi → (xi ,yi ).
 ```
 ```console
 On rassemblera les données comme dans le tableau suivant
 ```
 
-| w i | w 1 | w 2 | ... | w N |
+| wi  | w1  | w2  | ... | wN  |
 |-----|-----|-----|-----|-----|
-| VariableX | X(w 1 ) | X(w 2 ) | ... | X(w N ) |
-| VariableY | Y(w 1 ) | Y(w 2 ) | ... | Y(w N ) |
+| VariableX |X(w1)|X(w2)| ... |X(wN)|
+| VariableY |Y(w1)|Y(w2)| ... |Y(wN)|
 
 
 ```console
@@ -1533,9 +1533,9 @@ suivantes :
 ```
 ```js
 
-                 x i :=X(w i)
+                 x i := X(wi)
 
-                 et y i :=Y(w i).
+                 et y i := Y(wi).
 
 ```
 
@@ -1560,7 +1560,7 @@ avec X représente le nombre d’heures passées à préparer l’examen de stat
 ```console
 Lors de cette représentation, nous pouvons traduire le tableau associe dans une figure
 appelée "le nuage de points" ou "diagramme de dispersion" (voir Figure 4.1). Cette représen-
-tation est obtenue en mettant dans un repère cartésien chaque couple d’observation(x _i_ ,y _j_ )
+tation est obtenue en mettant dans un repère cartésien chaque couple d’observation(xi,yj)
 par un point.
 ```
 
@@ -1574,16 +1574,16 @@ Figure4.1:Représentation sous forme de nuage de points.
 **Présentation 2**
 
 ```console
-Soit la variable statistiqueZdonnée par le couple(X,Y). Soientx 1 , ...,x _k_ ety 1 ,...,y _l_
-les valeurs prises respectivement parXetY. Dans ce cas, nous définissons les valeurs deZ
-comme suite, pouriallant de 1 àket pourjallant de 1 àl,
+Soit la variable statistique Z donnée par le couple (X,Y). Soient x1, ...,xk et y1, ..., yl
+les valeurs prises respectivement par X et Y. Dans ce cas, nous définissons les valeurs de Z
+comme suite, pouriallant de 1 à k et pourjallant de 1 à l,
 ```
 ```js
-                         z ij := (x i ,y j ).
+                         zij := (xi, yj).
 ```
 
 ```console
-La variable statistiqueZprendk×lvaleurs. Lors de cette étude, nous avons le tableau à
+La variable statistique Z prend k×l valeurs. Lors de cette étude, nous avons le tableau à
 double entrée (ou tableau de contingence) suivant (discrète ou continue)
 ```
 
@@ -1599,27 +1599,27 @@ double entrée (ou tableau de contingence) suivant (discrète ou continue)
 
 
 ```console
-Cette représentation on l’a notera "présentation 2 ". A chaque couple(x i ,y i ), on an ij est
-l’effectif qui représente le nombre d’individus qui prennent en même temps la valeurx i et
-y i , c’est à dire,
+Cette représentation on l’a notera "présentation 2 ". A chaque couple (xi, yi), on an ij est
+l’effectif qui représente le nombre d’individus qui prennent en même temps la valeur xi et
+yi, c’est à dire,
 ```
 ```js
-                 n ij :=Card{w∈Ω :Z(w) =z ij }.
+                 nij := Card{w∈Ω :Z(w) =zij }.
 ```
 
 ![Image](https://github.com/daniel497/statistique_descriptive/blob/master/image4_2.jpg)
 
 
 ```
-Figure4.2:Le nombre d’individus qui prennent en même temps la valeurx i ety i.
+Figure4.2:Le nombre d’individus qui prennent en même temps la valeur xi et yi.
 ```
 
 ```console
-Nous notons parf ij la fréquence du coulpe(x i,y i). Cette fréquence est donnée par
+Nous notons par fij la fréquence du coulpe (xi, yi). Cette fréquence est donnée par
 
 ```
 ```js
-                  f ij := n ij/N,
+                  fij := nij/N,
 ```
 ```console
 avec
@@ -1627,11 +1627,11 @@ avec
 ```js
 N = Card(Ω),
     L   k 
-  = ∑   ∑  n ij, 
+  = ∑   ∑  nij, 
    j=1 i=1
 
     L   k 
-  = ∑   ∑  n ij, 
+  = ∑   ∑  nij, 
     i=1 j=1
 ```
 
@@ -1643,7 +1643,7 @@ Nous avons la propriété suivante,
 ```
 ```js
     L   k 
-    ∑   ∑  f ij = 1
+    ∑   ∑  fij = 1
     i=1 j=1
 ```
 
@@ -1651,24 +1651,24 @@ Nous avons la propriété suivante,
 
 ```console
 Sur la marge du tableau de contingence, on peut extraire les données seulement par
-rapport àXet seulement par rapport àY (voir le tableau de contingence établi aupara-
+rapport à X et seulement par rapport à Y (voir le tableau de contingence établi aupara-
 vant).
 ```
 
 _1. Effectifs et fréquences marginale par rapport àY : nous avons, pourj= 1...l,_
 
 ```js
-                     k
-             n•j := ∑ n ij
-                    i =1
+                    k
+             n•j := ∑ nij
+                   i =1
 ```
 ```console
           et
 ```
 ```js 
-                            k
-            f•j :=n•j/N = ∑ f ij. 
-                            i=1
+                           k
+            f•j := n•j/N = ∑ fij. 
+                          i=1
 ```
 
 
@@ -1676,7 +1676,7 @@ _2. Effectifs et fréquences marginale par rapport àX: nous avons, pouri= 1...k
 
 ```js
                      k
-             N i• := ∑ n ij
+             N i• := ∑ nij
                     i =1
 ```
 ```console
@@ -1684,7 +1684,7 @@ _2. Effectifs et fréquences marginale par rapport àX: nous avons, pouri= 1...k
 ```
 ```js 
                             k
-            f i• :=n i•/N = ∑ f ij. 
+            f i• :=n i•/N = ∑ fij. 
                             i=1
 ```
 
@@ -2142,4 +2142,4 @@ Figure4.8:La zone d’acceptation ou de refus de l’ajustement linéaire.
 
 
 #### Fin du cours.
-#### Consulter la partie exercice pour vous entraîner. [exercices](https://github.com/daniel497/statistique_descriptive/edit/master/exercices.md)
+#### Consulter la partie exercice pour vous entraîner. [exercices]()
